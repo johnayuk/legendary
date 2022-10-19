@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Interface\AdminInterface;
 use App\Interface\ManagerInterface;
+use App\Repositories\AdminRepo;
 use App\Repositories\ManagerRepo;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,6 +20,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             ManagerInterface::class,
             ManagerRepo::class
+        );
+
+        $this->app->bind(
+            AdminInterface::class,
+            AdminRepo::class
         );
     }
 

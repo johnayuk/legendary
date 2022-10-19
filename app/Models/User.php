@@ -72,6 +72,10 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasOne(Manager::class);
     }
 
+    public function admin(){
+        return $this->hasOne(Admin::class);
+    }
+
     public static function existingEmailPhone($data, $id){
         $dd = (object)$data;
         if(User::where('email', $dd->email)->where('id', '!=', $id)->exists()){

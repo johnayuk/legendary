@@ -57,4 +57,12 @@ Route::group([
     Route::post('/manager/update', 'ManagerController@update');
     Route::post('/manager/change/status', 'ManagerController@changeStatus');
 
+
+    //Managers
+    Route::post('/admin/create', 'AdminController@create');
+    Route::get('/admin/get/all', 'AdminController@getAllAdmins');
+    Route::post('/admin/get', 'AdminController@getAdmin');
+    Route::post('/admin/update', 'AdminController@update');
+    Route::post('/admin/change/status', 'AdminController@changeStatus');
+
 });

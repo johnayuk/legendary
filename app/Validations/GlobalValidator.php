@@ -99,6 +99,22 @@ use Illuminate\Support\Facades\Validator;
                 'dob' => 'required',
                 'image' => 'required',
                 'gender' => 'required',
+            ],
+
+
+            "getAdmin"=>[
+                "admin_id" => "required"
+            ],
+
+            "updateAdmin"=>[
+                "admin_id"=>'required',
+                'name' => 'required',
+                "phone" => "required",
+                'email' => 'required',
+                'address' => 'required',
+                'dob' => 'required',
+                'image' => 'required',
+                'gender' => 'required',
             ]
 
         ];
